@@ -2,11 +2,14 @@ import { motion } from 'framer-motion'
 import { Typewriter } from '../components/Typewriter'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export function LeadershipPage() {
+  const navigate = useNavigate()
+
   const handleQuoteClick = () => {
-    window.location.href = '/#quote'
+    navigate('/quote')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (

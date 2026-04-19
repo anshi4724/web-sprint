@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
-import { QuoteModal } from '../components/QuoteModal'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export function ContactPage() {
-  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -14,6 +14,11 @@ export function ContactPage() {
     subject: '',
     message: ''
   })
+
+  const handleQuoteClick = () => {
+    navigate('/quote')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   // Get user's current location for the address field only
   useEffect(() => {
@@ -93,7 +98,7 @@ ${formData.message}
 
   return (
     <div className="contact-page">
-      <Navbar onQuoteClick={() => setIsQuoteModalOpen(true)} />
+      <Navbar onQuoteClick={handleQuoteClick} />
 
       {/* Hero Section */}
       <section className="contact-hero-section">
@@ -123,7 +128,7 @@ ${formData.message}
             <button className="contact-hero-btn primary" onClick={scrollToForm}>
               Contact Now
             </button>
-            <button className="contact-hero-btn secondary" onClick={() => setIsQuoteModalOpen(true)}>
+            <button className="contact-hero-btn secondary" onClick={handleQuoteClick}>
               Get a Quote
             </button>
           </motion.div>
@@ -372,7 +377,7 @@ ${formData.message}
             <p className="contact-cta-text">
               Skip the chat and get a detailed estimate for your project instantly.
             </p>
-            <button className="contact-cta-btn" onClick={() => setIsQuoteModalOpen(true)}>
+            <button className="contact-cta-btn" onClick={handleQuoteClick}>
               Get a Quote
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -384,11 +389,6 @@ ${formData.message}
       </section>
 
       <Footer />
-
-      <QuoteModal 
-        isOpen={isQuoteModalOpen} 
-        onClose={() => setIsQuoteModalOpen(false)} 
-      />
     </div>
   )
 }

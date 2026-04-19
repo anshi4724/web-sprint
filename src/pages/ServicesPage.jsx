@@ -2,9 +2,11 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
+import { useNavigate } from 'react-router-dom'
 
 export function ServicesPage() {
   const [selectedService, setSelectedService] = useState(0)
+  const navigate = useNavigate()
 
   const services = [
     {
@@ -154,7 +156,8 @@ export function ServicesPage() {
   ]
 
   const handleQuoteClick = () => {
-    window.location.href = '/#quote'
+    navigate('/quote')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (

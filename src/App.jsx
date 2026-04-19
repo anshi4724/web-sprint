@@ -9,6 +9,7 @@ import { LeadershipPage } from './pages/LeadershipPage'
 import { PortfolioPage } from './pages/PortfolioPage'
 import { ContactPage } from './pages/ContactPage'
 import { SocialMediaDemoPage } from './pages/SocialMediaDemoPage'
+import { QuotePage } from './pages/QuotePage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/social-media-demo" element={<SocialMediaDemoPage />} />
+        <Route path="/quote" element={<QuotePage />} />
       </Routes>
     </Router>
   )
