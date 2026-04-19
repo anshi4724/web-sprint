@@ -18,7 +18,7 @@ export function Navbar({ onQuoteClick }) {
       <nav className="navbar">
         <div className="nav-container">
           <a href="/" className="logo">
-            <img src="/src/assets/websprint-logo.png" alt="WebSprint Logo" className="logo-image" />
+            <img src={logo} alt="WebSprint Logo" className="logo-image" />
             <div className="logo-text">
               <div className="logo-title">WEBSPRINT</div>
               <div className="logo-subtitle">Brand Boost</div>
