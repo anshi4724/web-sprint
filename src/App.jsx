@@ -8,6 +8,7 @@ import { HowItWorksPage } from './pages/HowItWorksPage'
 import { LeadershipPage } from './pages/LeadershipPage'
 import { PortfolioPage } from './pages/PortfolioPage'
 import { ContactPage } from './pages/ContactPage'
+import { SocialMediaDemoPage } from './pages/SocialMediaDemoPage'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/leadership" element={<LeadershipPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/social-media-demo" element={<SocialMediaDemoPage />} />
       </Routes>
     </Router>
   )

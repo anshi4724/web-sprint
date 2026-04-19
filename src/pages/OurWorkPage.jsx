@@ -46,8 +46,8 @@ export function OurWorkPage() {
                 title: "Social Media Posts",
                 desc: "Creative and engaging social media content designed to boost brand visibility and audience engagement.",
                 img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-                link: "/social-media-demo.html",
-                external: false   // ✅ SAME TAB
+                link: "/#/social-media-demo",
+                sameTab: true
               },
               {
                 title: "Corporate Website",
