@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logo from "../assets/websprint-logo.png";
 
 export function Navbar({ onQuoteClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -52,7 +53,7 @@ export function Navbar({ onQuoteClick }) {
         <div className="mobile-overlay">
           <div className="mobile-overlay-header">
             <a href="/" className="mobile-logo">
-              <img src="/src/assets/websprint-logo.png" alt="WebSprint Logo" className="mobile-logo-image" />
+              <img src={logo} alt="WebSprint Logo" className="mobile-logo-image" />
               <div className="mobile-logo-text">
                 <div className="mobile-logo-title">WEBSPRINT</div>
                 <div className="mobile-logo-subtitle">Brand Boost</div>

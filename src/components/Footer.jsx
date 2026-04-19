@@ -1,3 +1,5 @@
+import logo from "../assets/websprint-logo.png";
+
 export function Footer() {
   return (
     <footer className="footer">
@@ -5,7 +7,7 @@ export function Footer() {
         <div className="footer-content">
           <div className="footer-column footer-brand">
             <a href="/" className="footer-logo">
-              <img src="/src/assets/websprint-logo.png" alt="WebSprint Logo" className="footer-logo-image" />
+              <img src={logo} alt="WebSprint Logo" className="footer-logo-image" />
               <div className="footer-logo-text">
                 <div className="footer-logo-title">WEBSPRINT</div>
                 <div className="footer-logo-subtitle">Brand Boost</div>

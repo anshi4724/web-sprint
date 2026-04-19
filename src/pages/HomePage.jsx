@@ -7,22 +7,39 @@ import { TestimonialCarousel } from '../components/TestimonialCarousel'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 import { useState, useEffect } from 'react'
+import hero1 from "../assets/hero.jpg";
+import hero2 from "../assets/37197.jpg";
+import hero3 from "../assets/ideas-idea-vision-design-plan-objective-mission-concept.jpg";
+import hero4 from "../assets/web-design-concepts-with-blurred-background.jpg";
+import hero5 from "../assets/download (5).jpg";
+import hero6 from "../assets/download (6).jpg";
+import hero7 from "../assets/download (7).jpg";
+import hero8 from "../assets/download (8).jpg";
+import hero9 from "../assets/focus.jpg";
+import hero10 from "../assets/goal.jpg";
+
+import step1 from "../assets/step1.jpg";
+import step2 from "../assets/step2.jpg";
+import step3 from "../assets/step3.jpg";
+import step4 from "../assets/step4.jpg";
+
+import logo from "../assets/websprint-logo.png";
 
 export function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
   
   const heroImages = [
-    '/src/assets/hero.jpg',
-    '/src/assets/37197.jpg',
-    '/src/assets/ideas-idea-vision-design-plan-objective-mission-concept.jpg',
-    '/src/assets/web-design-concepts-with-blurred-background.jpg',
-    '/src/assets/download (5).jpg',
-    '/src/assets/download (6).jpg',
-    '/src/assets/download (7).jpg',
-    '/src/assets/download (8).jpg',
-    '/src/assets/focus.jpg',
-    '/src/assets/goal.jpg'
+    hero1,
+    hero2,
+    hero3,
+    hero4,
+    hero5,
+    hero6,
+    hero7,
+    hero8,
+    hero9,
+    hero10
   ]
 
   const imageRotations = [-8, 12, -15, 6, 10, -12, 8, -10, 15, -6]
@@ -165,25 +182,25 @@ export function HomePage() {
             steps={[
               {
                 number: "01",
-                image: "/src/assets/step1.jpg",
+                image: step1,
                 title: "Contact Us",
                 description: "Reach out to us through phone, email, or our contact form. We're here to listen and understand your goals."
               },
               {
                 number: "02",
-                image: "/src/assets/step2.jpg",
+                image: step2,
                 title: "Share Your Requirements",
                 description: "Tell us about your business, target audience, and what you want to achieve with your website."
               },
               {
                 number: "03",
-                image: "/src/assets/step3.jpg",
+                image: step3,
                 title: "We Design & Develop",
                 description: "Our team creates a stunning, functional website tailored to your brand and business needs."
               },
               {
                 number: "04",
-                image: "/src/assets/step4.jpg",
+                image: step4,
                 title: "Launch Your Website",
                 description: "After your approval, we launch your website and provide ongoing support to ensure success."
               }
@@ -769,7 +786,7 @@ export function HomePage() {
           <div className="footer-content">
             <div className="footer-column footer-brand">
               <div className="footer-logo">
-                <img src="/src/assets/websprint-logo.png" alt="WebSprint Logo" className="footer-logo-image" />
+                <img src={logo} alt="WebSprint Logo" className="footer-logo-image" />
                 <div className="footer-logo-text">
                   <div className="footer-logo-title">WEBSPRINT</div>
                   <div className="footer-logo-subtitle">Brand Boost</div>
