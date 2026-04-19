@@ -7,6 +7,8 @@ import { TestimonialCarousel } from '../components/TestimonialCarousel'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 import hero1 from "../assets/hero.jpg";
 import hero2 from "../assets/37197.jpg";
 import hero3 from "../assets/ideas-idea-vision-design-plan-objective-mission-concept.jpg";
@@ -372,7 +374,7 @@ export function HomePage() {
                 <p className="team-bio">
                   Passionate about creating beautiful, functional websites that help businesses thrive online. Specializes in modern web design and user experience.
                 </p>
-                <a href="/portfolio">
+                <Link to="/portfolio">
                   <button className="team-read-more">
                     Read More
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -380,7 +382,7 @@ export function HomePage() {
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                   </button>
-                </a>
+                </Link>
                 <div className="team-social">
                   <div className="team-contact">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -419,7 +421,7 @@ export function HomePage() {
                 <p className="team-bio">
                   Focused on enhancing brand visibility using data-driven SEO and social media strategies.Committed to delivering impactful and scalable digital growth.
                 </p>
-                <a href="/portfolio">
+                <Link to="/portfolio">
                   <button className="team-read-more">
                     Read More
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -427,7 +429,7 @@ export function HomePage() {
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                   </button>
-                </a>
+                </Link>
                 <div className="team-social">
                   <div className="team-contact">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
