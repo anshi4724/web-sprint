@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Posts - WebSprint</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0d5f6d 0%, #1a3d4a 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .post-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .back-button {
+            background: white;
+            color: #0d5f6d;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            display: block;
+            width: fit-content;
+            border: 2px solid #4dd4ac;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background: #4dd4ac;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(77, 212, 172, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .posts-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Social Media Posts</h1>
+            <p>Creative and engaging social media content designed to boost brand visibility and audience engagement.</p>
+        </div>
+
+        <div class="posts-grid">
+            <div class="post-card">
+                <img src="/src/assets/post1.png" 
+                     alt="Instagram Post - Transform Your Online Presence">
+            </div>
+
+            <div class="post-card">
+                <img src="/src/assets/post2.png" 
+                     alt="Sleek Instagram Profile Concept for WebSprint">
+            </div>
+        </div>
+
+        <button onclick="window.history.back()" class="back-button">← Back to Home</button>
+    </div>
+</body>
+</html>
