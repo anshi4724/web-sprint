@@ -829,7 +829,7 @@ export function HomePage() {
                 <li><a href="#services">Services</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="/our-work">Our Work</a></li>
               </ul>
             </div>
 

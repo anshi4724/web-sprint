@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { PremiumHero } from '../components/PremiumHero'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 
@@ -154,26 +153,16 @@ export function ServicesPage() {
     }
   ]
 
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services-section')
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   const handleQuoteClick = () => {
     window.location.href = '/#quote'
   }
 
   return (
     <div className="services-page">
-      {/* Premium Hero Section */}
-      <PremiumHero onExploreClick={scrollToServices} onQuoteClick={handleQuoteClick} />
-
       <Navbar onQuoteClick={handleQuoteClick} />
 
       {/* Services Section with Sidebar */}
-      <section id="services-section" className="services-section services-full-page">
+      <section className="services-section services-full-page">
         <div className="services-sidebar-container">
           <motion.h2 
             className="section-title"

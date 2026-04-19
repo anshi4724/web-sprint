@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from "../assets/websprint-logo.png";
 
 export function Navbar({ onQuoteClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -13,29 +14,35 @@ export function Navbar({ onQuoteClick }) {
     setIsMenuOpen(false)
   }
 
+  const handleNavClick = (path) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    navigate(path)
+    closeMenu()
+  }
+
   return (
     <>
       <nav className="navbar">
         <div className="nav-container">
 
           {/* Logo */}
-          <Link to="/" className="logo">
+          <div onClick={() => handleNavClick('/')} className="logo" style={{ cursor: 'pointer' }}>
             <img src={logo} alt="WebSprint Logo" className="logo-image" />
             <div className="logo-text">
               <div className="logo-title">WEBSPRINT</div>
               <div className="logo-subtitle">Brand Boost</div>
             </div>
-          </Link>
+          </div>
 
           {/* Desktop Menu */}
           <ul className="nav-menu desktop-menu">
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/about">ABOUT</Link></li>
-            <li><Link to="/services">SERVICES</Link></li>
-            <li><Link to="/how-it-works">HOW IT WORKS</Link></li>
-            <li><Link to="/leadership">LEADERSHIP</Link></li>
-            <li><Link to="/portfolio">PORTFOLIO</Link></li>
-            <li><Link to="/contact">CONTACT US</Link></li>
+            <li><a onClick={() => handleNavClick('/')} style={{ cursor: 'pointer' }}>HOME</a></li>
+            <li><a onClick={() => handleNavClick('/about')} style={{ cursor: 'pointer' }}>ABOUT</a></li>
+            <li><a onClick={() => handleNavClick('/services')} style={{ cursor: 'pointer' }}>SERVICES</a></li>
+            <li><a onClick={() => handleNavClick('/how-it-works')} style={{ cursor: 'pointer' }}>HOW IT WORKS</a></li>
+            <li><a onClick={() => handleNavClick('/leadership')} style={{ cursor: 'pointer' }}>LEADERSHIP</a></li>
+            <li><a onClick={() => handleNavClick('/portfolio')} style={{ cursor: 'pointer' }}>PORTFOLIO</a></li>
+            <li><a onClick={() => handleNavClick('/contact')} style={{ cursor: 'pointer' }}>CONTACT US</a></li>
           </ul>
 
           {/* Desktop Quote Button */}
@@ -57,25 +64,25 @@ export function Navbar({ onQuoteClick }) {
         <div className="mobile-overlay">
           <div className="mobile-overlay-header">
 
-            <Link to="/" className="mobile-logo" onClick={closeMenu}>
+            <div onClick={() => handleNavClick('/')} className="mobile-logo" style={{ cursor: 'pointer' }}>
               <img src={logo} alt="WebSprint Logo" className="mobile-logo-image" />
               <div className="mobile-logo-text">
                 <div className="mobile-logo-title">WEBSPRINT</div>
                 <div className="mobile-logo-subtitle">Brand Boost</div>
               </div>
-            </Link>
+            </div>
 
             <button className="close-btn" onClick={closeMenu}>✕</button>
           </div>
 
           <div className="mobile-menu-content">
-            <Link to="/" onClick={closeMenu} className="mobile-menu-item">HOME</Link>
-            <Link to="/about" onClick={closeMenu} className="mobile-menu-item">ABOUT</Link>
-            <Link to="/services" onClick={closeMenu} className="mobile-menu-item">SERVICES</Link>
-            <Link to="/how-it-works" onClick={closeMenu} className="mobile-menu-item">HOW IT WORKS</Link>
-            <Link to="/leadership" onClick={closeMenu} className="mobile-menu-item">LEADERSHIP</Link>
-            <Link to="/portfolio" onClick={closeMenu} className="mobile-menu-item">PORTFOLIO</Link>
-            <Link to="/contact" onClick={closeMenu} className="mobile-menu-item">CONTACT US</Link>
+            <a onClick={() => handleNavClick('/')} className="mobile-menu-item">HOME</a>
+            <a onClick={() => handleNavClick('/about')} className="mobile-menu-item">ABOUT</a>
+            <a onClick={() => handleNavClick('/services')} className="mobile-menu-item">SERVICES</a>
+            <a onClick={() => handleNavClick('/how-it-works')} className="mobile-menu-item">HOW IT WORKS</a>
+            <a onClick={() => handleNavClick('/leadership')} className="mobile-menu-item">LEADERSHIP</a>
+            <a onClick={() => handleNavClick('/portfolio')} className="mobile-menu-item">PORTFOLIO</a>
+            <a onClick={() => handleNavClick('/contact')} className="mobile-menu-item">CONTACT US</a>
 
             <div className="mobile-auth-buttons">
               <button
