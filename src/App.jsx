@@ -1,5 +1,6 @@
 import './App.css'
-import { HashRouter as Router } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+
 import { HomePage } from './pages/HomePage'
 import { AboutPage } from './pages/AboutPage'
 import { ServicesPage } from './pages/ServicesPage'
